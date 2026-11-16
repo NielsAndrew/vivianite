@@ -5,11 +5,11 @@
 	"name": "Vivianite",
 	"description": "This mod is a tutorial mod, its bad",
 	"authors": [
-		"Me!"
+		"Niels"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/NielsAndrew/vivianite/"
 	},
 	"license": "MIT",
 	"icon": "assets/vivianite/icon.png",
@@ -24,6 +24,14 @@
 		"fabric-datagen": [
 			"net.dumb.vivianite.VivianiteDataGenerator"
 		]
+	},
+	"custom": {
+		"modmenu": {
+			"update_checker": false,
+			"links": {
+				"modrinth": "not yet"
+			}
+		}
 	},
 	"mixins": [
 		"vivianite.mixins.json"
