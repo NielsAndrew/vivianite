@@ -1,9 +1,9 @@
 package net.dumb.vivianite;
 
+import net.dumb.vivianite.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
-import net.minecraft.resources.ResourceLocation;
-
+import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,11 +15,11 @@ public class Vivianite implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
-
-		LOGGER.info("The gem of mortals");
+		ModItems.registerModItems();
+		LOGGER.info("The gem of the dead");
 	}
 
-	public static ResourceLocation id(String path) {
-		return new ResourceLocation(MOD_ID, path);
+	public static Identifier id(String path) {
+		return new Identifier(MOD_ID, path);
 	}
 }
