@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "vivianite",
+	"version": "${version}",
+	"name": "Vivianite",
+	"description": "This mod is a tutorial mod, its bad",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/vivianite/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.dumb.vivianite.Vivianite"
+		],
+		"client": [
+			"net.dumb.vivianite.VivianiteClient"
+		],
+		"fabric-datagen": [
+			"net.dumb.vivianite.VivianiteDataGenerator"
+		]
+	},
+	"mixins": [
+		"vivianite.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
