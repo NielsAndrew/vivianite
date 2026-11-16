@@ -16,7 +16,7 @@ public class Vivianite implements ModInitializer {
 	public void onInitialize() {
 
 
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info("The gem of mortals");
 	}
 
 	public static ResourceLocation id(String path) {
