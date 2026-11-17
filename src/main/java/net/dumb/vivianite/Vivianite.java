@@ -1,6 +1,7 @@
 package net.dumb.vivianite;
 
 import net.dumb.vivianite.block.ModBlocks;
+import net.dumb.vivianite.item.ModItemGroups;
 import net.dumb.vivianite.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
@@ -15,6 +16,7 @@ public class Vivianite implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info("The gem of mortals");
+		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 
