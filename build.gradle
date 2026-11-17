@@ -4,11 +4,32 @@ plugins {
 }
 
 repositories {
-	// Add repositories to retrieve artifacts from in here.
-	// You should only use this when depending on other mods because
-	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
-	// for more information about repositories.
+	maven {
+		name = "Terraformers"
+		url = "https://maven.terraformersmc.com/"
+	}
+	exclusiveContent {
+		forRepository {
+			maven {
+				name = "Modrinth"
+				url = "https://api.modrinth.com/maven"
+			}
+		}
+		filter {
+			includeGroup "maven.modrinth"
+		}
+	}
+	maven {
+		name = "Ladysnake Mods"
+		url = 'https://maven.ladysnake.org/releases'
+	}
+	maven {
+		name = "JamiesWhiteShirt"
+		url = "https://maven.jamieswhiteshirt.com/libs-release"
+		content {
+			includeGroup "com.jamieswhiteshirt"
+		}
+	}
 }
 
 fabricApi {
@@ -23,7 +44,15 @@ dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings "net.fabricmc:yarn:1.20.1+build.10:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	//Mod menu cause yes
 	modImplementation "com.terraformersmc:modmenu:7.2.2"
+	//Amarite and Co.
+	modImplementation "maven.modrinth:ftofxBty:avD3BFrw"
+	modRuntimeOnly "maven.modrinth:trinkets:3.7.2"
+	modRuntimeOnly "dev.onyxstudios.cardinal-components-api:cardinal-components-base:5.2.2"
+	modRuntimeOnly "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:5.2.2"
+	modRuntimeOnly "dev.onyxstudios.cardinal-components-api:cardinal-components-block:5.2.2"
+	modImplementation "com.jamieswhiteshirt:reach-entity-attributes:2.4.0"
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 }
@@ -69,9 +98,4 @@ publishing {
 	}
 }
 	// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
-	repositories {
-		maven {
-			name = "Terraformers"
-			url = "https://maven.terraformersmc.com/"
-		}
-	}
+
