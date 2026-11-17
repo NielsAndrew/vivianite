@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "vivianite:shard"
+    },
+    {
+      "item": "vivianite:shard"
+    },
+    {
+      "item": "vivianite:shard"
+    },
+    {
+      "item": "vivianite:shard"
+    },
+    {
+      "item": "vivianite:shard"
+    },
+    {
+      "item": "vivianite:shard"
+    },
+    {
+      "item": "vivianite:shard"
+    },
+    {
+      "item": "vivianite:shard"
+    },
+    {
+      "item": "vivianite:shard"
+    }
+  ],
+  "result": {
+    "item": "vivianite:vivianite_block"
+  }
+}
